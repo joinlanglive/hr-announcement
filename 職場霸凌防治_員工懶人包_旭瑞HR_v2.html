@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>職場霸凌防治懶人包 — 員工版 · 旭瑞文化傳媒</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange:  #F4763A;
+  --coral:   #EF5B7A;
+  --pink:    #E8408C;
+  --magenta: #C83498;
+  --purple:  #8B3AB8;
+  --grad: linear-gradient(120deg, #F4763A 0%, #EF5B7A 35%, #E8408C 60%, #8B3AB8 100%);
+  --grad-r: linear-gradient(120deg, #8B3AB8 0%, #E8408C 50%, #F4763A 100%);
+  --grad-soft: linear-gradient(120deg, rgba(244,118,58,0.10) 0%, rgba(232,64,140,0.10) 60%, rgba(139,58,184,0.10) 100%);
+  --ink:   #1A1010;
+  --ink-2: #3A2030;
+  --ink-3: #806070;
+  --border: #EAE0E8;
+  --bg:    #FCF8FB;
+  --white: #fff;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 15px;
+}
+.page { max-width: 740px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--grad);
+  border-radius: 18px;
+  padding: 2.4rem 2rem 2rem;
+  color: #fff; margin-bottom: 1.4rem;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; right: -60px; top: -60px;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.1em; font-weight: 600;
+  opacity: 0.85; margin-bottom: 0.7rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,0.7); }
+.hero h1 { font-size: 26px; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem; }
+.hero-desc { font-size: 13px; opacity: 0.88; max-width: 480px; }
+.hero-date {
+  display: inline-block; margin-top: 1.1rem;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 20px; padding: 4px 16px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+}
+
+/* ── SECTION ── */
+.sec {
+  background: var(--white);
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.sec-head {
+  padding: 1rem 1.4rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+  background: var(--grad-soft);
+}
+.sec-icon { font-size: 20px; }
+.sec-title { font-size: 15px; font-weight: 700; }
+.sec-subtitle { font-size: 12px; color: var(--ink-3); margin-top: 1px; }
+.sec-body { padding: 1.2rem 1.4rem; }
+
+/* ── GRADIENT pill ── */
+.gpill {
+  display: inline-block;
+  background: var(--grad);
+  color: #fff; font-size: 11px; font-weight: 700;
+  border-radius: 12px; padding: 2px 10px;
+  letter-spacing: 0.04em;
+}
+
+/* ── DEFINITION ── */
+.def-bar { width: 100%; height: 4px; background: var(--grad); border-radius: 2px; margin-bottom: 0.75rem; }
+.def-box {
+  background: var(--grad-soft);
+  border: 1px solid rgba(232,64,140,0.18);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 14px; color: var(--ink-2); line-height: 1.75;
+}
+
+/* ── FIVE CONDITIONS ── */
+.cond-row { display: flex; gap: 12px; margin-bottom: 0.8rem; align-items: flex-start; }
+.cond-row:last-child { margin-bottom: 0; }
+.cond-num {
+  min-width: 26px; height: 26px;
+  background: var(--grad);
+  color: #fff; border-radius: 50%;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.cond-text { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+.cond-text strong { color: var(--pink); font-weight: 600; }
+
+/* ── ALERT ── */
+.alert {
+  border-radius: 8px; padding: 0.8rem 1rem;
+  font-size: 13px; line-height: 1.6;
+  margin-top: 0.85rem;
+  display: flex; gap: 8px; align-items: flex-start;
+}
+.alert.warn { background: rgba(244,118,58,0.1); color: #8A3A00; border: 1px solid rgba(244,118,58,0.3); }
+.alert.good { background: rgba(16,120,70,0.08); color: #0A5A38; border: 1px solid rgba(16,120,70,0.25); }
+.alert.info { background: rgba(139,58,184,0.08); color: var(--purple); border: 1px solid rgba(139,58,184,0.25); }
+.alert.brand { background: var(--grad-soft); color: var(--magenta); border: 1px solid rgba(232,64,140,0.25); }
+
+/* ── TYPE GRID ── */
+.type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 520px) { .type-grid { grid-template-columns: 1fr; } }
+.type-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.75rem 0.9rem;
+}
+.type-tag { font-size: 11px; font-weight: 700; color: var(--pink); margin-bottom: 4px; }
+.type-desc { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+.type-card.special { background: var(--grad-soft); border-color: rgba(232,64,140,0.2); }
+.type-card.special .type-tag { color: var(--magenta); }
+
+/* ── COMPARE ── */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 500px) { .compare { grid-template-columns: 1fr; } }
+.compare-col { border-radius: 10px; padding: 1rem; }
+.compare-col.ok { background: rgba(16,120,70,0.07); border: 1px solid rgba(16,120,70,0.2); }
+.compare-col.bad { background: var(--grad-soft); border: 1px solid rgba(232,64,140,0.2); }
+.compare-head { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.compare-col.ok .compare-head { color: #0A6B3A; }
+.compare-col.bad .compare-head { color: var(--pink); }
+.compare-item { font-size: 13px; color: var(--ink-2); margin-bottom: 6px; padding-left: 16px; position: relative; line-height: 1.5; }
+.compare-item::before { position: absolute; left: 0; font-weight: 700; }
+.compare-col.ok .compare-item::before { content: '✓'; color: #0A6B3A; }
+.compare-col.bad .compare-item::before { content: '✗'; color: var(--pink); }
+
+/* ── EVIDENCE GRID ── */
+.evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+@media (max-width: 520px) { .evidence-grid { grid-template-columns: 1fr; } }
+.ev-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.8rem 0.9rem;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.ev-icon { font-size: 20px; flex-shrink: 0; }
+.ev-label { font-size: 12px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+.ev-desc { font-size: 12px; color: var(--ink-3); line-height: 1.45; }
+
+/* ── CHANNELS ── */
+.channel-card {
+  display: flex; gap: 12px; align-items: flex-start;
+  border-radius: 10px; padding: 0.9rem 1rem;
+  border: 1px solid var(--border); margin-bottom: 10px;
+}
+.channel-card:last-child { margin-bottom: 0; }
+.channel-card.int { background: rgba(239,91,122,0.07); border-color: rgba(239,91,122,0.25); }
+.channel-card.ext { background: rgba(139,58,184,0.07); border-color: rgba(139,58,184,0.25); }
+.channel-card.tel { background: rgba(244,118,58,0.07); border-color: rgba(244,118,58,0.25); }
+.ch-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.ch-title { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+.channel-card.int .ch-title { color: var(--coral); }
+.channel-card.ext .ch-title { color: var(--purple); }
+.channel-card.tel .ch-title { color: var(--orange); }
+.ch-desc { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+
+/* ── FLOW ── */
+.flow-step { display: flex; gap: 14px; }
+.flow-left { display: flex; flex-direction: column; align-items: center; }
+.flow-dot {
+  width: 32px; height: 32px; background: var(--grad);
+  border-radius: 50%; color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.flow-line { flex: 1; width: 2px; background: var(--border); margin: 3px 0; min-height: 18px; }
+.flow-step:last-child .flow-line { display: none; }
+.flow-content { padding-bottom: 1.1rem; flex: 1; }
+.flow-badge {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  background: var(--grad-soft); color: var(--magenta);
+  border: 1px solid rgba(232,64,140,0.25);
+  border-radius: 10px; padding: 1px 9px; margin-bottom: 4px;
+}
+.flow-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.flow-desc { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+
+/* ── RIGHTS ── */
+.rights-row { display: flex; gap: 10px; margin-bottom: 0.85rem; align-items: flex-start; }
+.rights-row:last-child { margin-bottom: 0; }
+.r-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.r-text { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+.r-text strong { color: var(--ink); font-weight: 600; }
+
+/* ── FAQ ── */
+details { border-bottom: 1px solid var(--border); }
+details:last-child { border-bottom: none; }
+summary {
+  padding: 0.9rem 0;
+  font-size: 14px; font-weight: 600; color: var(--ink);
+  cursor: pointer; display: flex; align-items: center; gap: 10px;
+  list-style: none; user-select: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: 'Q';
+  min-width: 22px; height: 22px;
+  background: var(--grad);
+  color: #fff; border-radius: 50%;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+details[open] summary::before { background: var(--ink); }
+summary::after { content: '+'; margin-left: auto; color: var(--ink-3); font-size: 18px; font-weight: 300; }
+details[open] summary::after { content: '−'; }
+.faq-ans { padding: 0 0 1rem 32px; font-size: 13.5px; color: var(--ink-2); line-height: 1.7; }
+.faq-ans strong { color: var(--ink); }
+.hl { background: var(--grad-soft); color: var(--magenta); font-weight: 700; border-radius: 4px; padding: 1px 6px; display: inline-block; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--grad);
+  border-radius: 14px;
+  padding: 1.1rem 1.5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  margin-top: 0.5rem;
+}
+.footer-text { font-size: 12px; color: rgba(255,255,255,0.82); }
+.footer-badge {
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 4px 14px; border-radius: 12px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow"><span></span>旭瑞文化傳媒（浪LIVE）人力資源部 · HR 員工宣導</div>
+  <h1>職場霸凌防治<br>員工懶人包</h1>
+  <p class="hero-desc">2026 年 7 月 1 日起，台灣首次將「職場霸凌」正式寫進法律。什麼算霸凌、怎麼蒐證、如何申訴、公司要怎麼保護你——一次說清楚。</p>
+  <span class="hero-date">《職安法》霸凌防治專章 · 2026 / 7 / 1 正式施行</span>
+</div>
+
+<!-- 1. 定義 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📖</div>
+    <div>
+      <div class="sec-title">什麼是「職場霸凌」？</div>
+      <div class="sec-subtitle">法律第一次給了明確定義</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <div style="margin-bottom:0.6rem;"><span class="gpill">職安法第 22 條之 1</span></div>
+    <div class="def-box">
+      勞工在勞動場所執行職務時，因事業單位人員<strong>利用職務或權勢</strong>，逾越業務上必要且合理範圍，<strong>持續以冒犯、威脅、冷落、孤立、侮辱或其他不當言詞或行為</strong>，致其身心健康遭受危害。
+    </div>
+
+    <p style="font-size:13px; color:var(--ink-3); font-weight:600; margin-bottom:0.8rem;">要同時符合以下 5 個條件才構成霸凌 ↓</p>
+    <div class="cond-row"><div class="cond-num">1</div><div class="cond-text"><strong>發生在工作場所、執行職務時</strong>——含遠距辦公、出差、外勤，LINE / Teams / Email 中的言詞也算</div></div>
+    <div class="cond-row"><div class="cond-num">2</div><div class="cond-text"><strong>同一公司人員所為</strong>——可以是主管、同事，甚至部屬對主管也可能成立</div></div>
+    <div class="cond-row"><div class="cond-num">3</div><div class="cond-text"><strong>利用職務或職權</strong>——逾越了業務上必要且合理的範圍</div></div>
+    <div class="cond-row"><div class="cond-num">4</div><div class="cond-text"><strong>持續發生</strong>——重複、累積性的行為</div></div>
+    <div class="cond-row" style="margin-bottom:0"><div class="cond-num">5</div><div class="cond-text"><strong>造成身心健康危害</strong>——不需要到具體受傷，導致惡劣工作環境就算</div></div>
+
+    <div class="alert warn" style="margin-top:0.9rem;">
+      <span>⚡</span>
+      <span>但書：情節重大者，<strong>即使只發生一次</strong>也可能成立！例如公開嚴重人格羞辱、威脅人身安全。</span>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 7種樣態 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🔍</div>
+    <div>
+      <div class="sec-title">常見的 7 種霸凌行為</div>
+      <div class="sec-subtitle">不只是罵人才算——這些都可能構成霸凌</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <div class="type-grid">
+      <div class="type-card"><div class="type-tag">① 吹毛求疵</div><div class="type-desc">持續放大微小錯誤、扭曲事實、無端否定</div></div>
+      <div class="type-card"><div class="type-tag">② 孤立 · 排擠</div><div class="type-desc">刻意邊緣化，不讓特定人參與重要事務或社交場合</div></div>
+      <div class="type-card"><div class="type-tag">③ 公然羞辱</div><div class="type-desc">在他人面前咆哮、威脅、貶低人格（含群組點名批評）</div></div>
+      <div class="type-card"><div class="type-tag">④ 否定價值</div><div class="type-desc">持續批評、拒絕看見努力，否定當事人存在價值</div></div>
+      <div class="type-card"><div class="type-tag">⑤ 阻礙工作</div><div class="type-desc">無故不准假、阻礙訓練、刻意隱瞞必要工作資訊</div></div>
+      <div class="type-card"><div class="type-tag">⑥ 不當工作指派</div><div class="type-desc">指派明顯不符能力的過重工作，或反覆給予無意義瑣事</div></div>
+      <div class="type-card"><div class="type-tag">⑦ 不可能的目標</div><div class="type-desc">故意設定做不到的目標、刻意縮短期限、阻礙完成</div></div>
+      <div class="type-card special"><div class="type-tag">概括條款</div><div class="type-desc">不在以上 7 種中、但性質相似的行為，同樣可能被認定！</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. 霸凌 vs 管理 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">⚖️</div>
+    <div>
+      <div class="sec-title">正常管理 vs 職場霸凌</div>
+      <div class="sec-subtitle">關鍵看「目的」與「方式」，不是嚴格就等於霸凌</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <div class="compare">
+      <div class="compare-col ok">
+        <div class="compare-head"><span>✅</span> 合法管理行為</div>
+        <div class="compare-item">要求績效、糾正具體錯誤</div>
+        <div class="compare-item">針對行為給予明確回饋</div>
+        <div class="compare-item">全團隊一致的衝刺要求</div>
+        <div class="compare-item">「這裡錯三次了，認真點」</div>
+        <div class="compare-item">合理的工作壓力與挑戰</div>
+      </div>
+      <div class="compare-col bad">
+        <div class="compare-head"><span>🚫</span> 可能構成霸凌</div>
+        <div class="compare-item">針對特定人指派做不到的任務</div>
+        <div class="compare-item">「腦袋裝屎」「豬頭」等人格貶低</div>
+        <div class="compare-item">持續性的社交排擠、冷落</div>
+        <div class="compare-item">在群組公開點名羞辱</div>
+        <div class="compare-item">用「冷漠忽視」當施壓工具</div>
+      </div>
+    </div>
+    <div class="alert info">
+      <span>💡</span>
+      <span>判斷核心：<strong>有沒有逾越業務必要且合理範圍？是不是針對特定人、持續發生？</strong>這兩點才是關鍵。</span>
+    </div>
+  </div>
+</div>
+
+<!-- 4. 蒐證→申訴 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🛡️</div>
+    <div>
+      <div class="sec-title">覺得自己被霸凌，可以怎麼做？</div>
+      <div class="sec-subtitle">蒐證 → 選管道 → 申訴，三步驟</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <p style="font-size:13px; font-weight:700; color:var(--magenta); margin-bottom:0.75rem;">STEP 1 ·  先把證據留下來</p>
+    <div class="evidence-grid" style="margin-bottom:1.3rem;">
+      <div class="ev-card"><div class="ev-icon">📱</div><div><div class="ev-label">截圖 / 訊息紀錄</div><div class="ev-desc">LINE、Teams、Email 中的不當言論，截圖存好</div></div></div>
+      <div class="ev-card"><div class="ev-icon">📝</div><div><div class="ev-label">詳細日誌</div><div class="ev-desc">記下「時間、地點、在場人員、具體言行」</div></div></div>
+      <div class="ev-card"><div class="ev-icon">🎙️</div><div><div class="ev-label">合法錄音</div><div class="ev-desc">台灣對話可單方錄音（自己在場），保留音檔</div></div></div>
+      <div class="ev-card"><div class="ev-icon">🏥</div><div><div class="ev-label">身心科診斷</div><div class="ev-desc">若身心受影響，就醫並保存診斷書作為佐證</div></div></div>
+    </div>
+
+    <p style="font-size:13px; font-weight:700; color:var(--magenta); margin-bottom:0.75rem;">STEP 2 ·  選擇申訴管道</p>
+    <div class="channel-card int">
+      <div class="ch-icon">🏢</div>
+      <div><div class="ch-title">內部申訴 → 向人資部提出書面申訴</div>
+      <div class="ch-desc">旭瑞文化傳媒已建立內部申訴管道。收到申訴後 <strong>10 個工作日內</strong>書面通知是否受理，受理後啟動調查。所有申訴受<strong>嚴格保密保護</strong>。</div></div>
+    </div>
+    <div class="channel-card ext">
+      <div class="ch-icon">⚖️</div>
+      <div><div class="ch-title">外部申訴 → 被申訴人是公司最高負責人時</div>
+      <div class="ch-desc">可<strong>直接向地方勞動局</strong>提出申訴，無需先走內部流程。這是新法最重要的補洞——以前員工幾乎沒有管道，現在有了。</div></div>
+    </div>
+    <div class="channel-card tel">
+      <div class="ch-icon">📞</div>
+      <div><div class="ch-title">諮詢專線 → 不確定算不算、不知道怎麼做</div>
+      <div class="ch-desc">撥打 <strong>1955 勞動法令諮詢專線</strong>（免費，可匿名）或 <strong>0800-068-580</strong>，詢問個人情況是否符合申訴條件。</div></div>
+    </div>
+
+    <div class="alert warn" style="margin-top:0.9rem;">
+      <span>⏰</span>
+      <span>申訴時效：霸凌行為終了起 <strong>3 年內</strong>；已離職者 <strong>離職後 1 年內</strong> 仍可申訴。以對你較有利的時效計算。</span>
+    </div>
+  </div>
+</div>
+
+<!-- 5. 申訴流程 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">📋</div>
+    <div>
+      <div class="sec-title">申訴後，公司要怎麼處理？</div>
+      <div class="sec-subtitle">法律訂了明確時限，公司不能拖</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">1</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-title">提出申訴</div>
+        <div class="flow-desc">向人資部書面申訴，或向地方勞動局外部申訴（老闆涉案時）</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">2</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-badge">⏱ 10 個工作日內</div>
+        <div class="flow-title">受理通知 + 立即保護</div>
+        <div class="flow-desc">書面通知是否受理，並立即啟動保護措施（如調整座位、報到對象），提供心理諮商等資源</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">3</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-badge">⏱ 受理後 7 日內（100人以上）</div>
+        <div class="flow-title">組成調查小組</div>
+        <div class="flow-desc">外部委員須佔 1/2 以上，任一性別不得少於 1/3，確保公正性</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">4</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-badge">⏱ 2 個月內完成（必要時延 1 個月）</div>
+        <div class="flow-title">調查並作成報告</div>
+        <div class="flow-desc">訪談雙方及證人、審閱證據，所有人均簽保密協定</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">5</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-badge">⏱ 報告完成後 1 個月內</div>
+        <div class="flow-title">作出霸凌成立與否的決定</div>
+        <div class="flow-desc">申訴處理單位審議，10 個工作日內書面通知當事人</div>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-left"><div class="flow-dot">6</div><div class="flow-line"></div></div>
+      <div class="flow-content">
+        <div class="flow-title">不服結果？可申復</div>
+        <div class="flow-desc">收到通知後 <strong>30 日內</strong>可提出申復（僅限一次）。對申訴人及被申訴人均適用</div>
+      </div>
+    </div>
+    <div class="alert good">
+      <span>✅</span>
+      <span>霸凌成立後，公司必須對行為人作出適當懲戒（訓誡、調職、記過、解僱等），並登錄政府指定網站。</span>
+    </div>
+  </div>
+</div>
+
+<!-- 6. 你的保護 -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">🔒</div>
+    <div>
+      <div class="sec-title">申訴之後，你受到哪些保護？</div>
+      <div class="sec-subtitle">法律明文保障，不要害怕說出來</div>
+    </div>
+  </div>
+  <div class="sec-body">
+    <div class="rights-row"><div class="r-icon">🤐</div><div class="r-text"><strong>絕對保密：</strong>參與調查的所有人都須簽保密協定，你的身分不會被洩漏</div></div>
+    <div class="rights-row"><div class="r-icon">🚫</div><div class="r-text"><strong>不得報復：</strong>公司不得因你申訴而解僱、調職、降職或任何不利對待。若發生報復，可再次申訴，公司面臨額外罰款</div></div>
+    <div class="rights-row"><div class="r-icon">💰</div><div class="r-text"><strong>申訴不成立也不會被罰：</strong>就算最後認定不構成霸凌，除非惡意捏造事實，公司不得以此懲處你</div></div>
+    <div class="rights-row"><div class="r-icon">🏥</div><div class="r-text"><strong>立即保護措施：</strong>公司知悉後須立即行動——調整辦公位置、改變雙方互動關係，提供心理諮商</div></div>
+    <div class="rights-row" style="margin-bottom:0"><div class="r-icon">👥</div><div class="r-text"><strong>派遣員工同樣適用：</strong>在旭瑞（要派公司）被霸凌，申訴比照正職員工，由雙方公司共同調查</div></div>
+  </div>
+</div>
+
+<!-- 7. FAQ -->
+<div class="sec">
+  <div class="sec-head">
+    <div class="sec-icon">💬</div>
+    <div>
+      <div class="sec-title">員工最常問的問題</div>
+      <div class="sec-subtitle">點開看白話解答</div>
+    </div>
+  </div>
+  <div class="sec-body" style="padding: 0.3rem 1.4rem;">
+    <details>
+      <summary>下班傳 LINE 叫我做事、訂便當沒揪我，算霸凌嗎？</summary>
+      <div class="faq-ans">
+        <strong>要看情境，不是一概而論。</strong><br><br>
+        下班 LINE：<span class="hl">持續性</span>、<span class="hl">大量</span>要求即時回覆且造成心理壓力，可能構成霸凌。偶發加班情境不同。<br><br>
+        訂便當沒揪：偶爾忘了不算。但若是主管利用職務之便，<strong>刻意、持續地漏掉特定人</strong>（尤其公費餐），且造成孤立效果，可能構成「社交排斥」樣態的霸凌。<br><br>
+        判斷三關鍵：① 跟工作有關嗎？② 重複發生嗎？③ 針對特定人嗎？
+      </div>
+    </details>
+    <details>
+      <summary>主管嚴格要求我、常常罵我，一定是霸凌嗎？</summary>
+      <div class="faq-ans">
+        不一定。<strong>法律保障雇主的管理權</strong>，合理的績效要求、糾正錯誤、給予挑戰都不是霸凌。<br><br>
+        核心在罵的是「事」還是「人」？<br>
+        「這裡錯三次了，認真點」→ 有事實依據，合法管理<br>
+        「你腦袋裝屎」「豬頭」→ 與工作無關的人格貶低，可能構成霸凌<br><br>
+        另外，<strong>情節重大者即使只發生一次也成立</strong>。
+      </div>
+    </details>
+    <details>
+      <summary>霸凌的人是我的大老闆，我能怎麼辦？</summary>
+      <div class="faq-ans">
+        這是新法<strong>最重要的補洞！</strong> 過去幾乎沒有管道，現在有了。<br><br>
+        若被申訴人是公司最高負責人（包含實質掌控人事、財務的人），你可以<strong>直接向地方勞動局申訴</strong>，不需先走公司內部流程。<br><br>
+        查證屬實可對負責人本人開罰 <span class="hl">1 萬～100 萬元（個人罰）</span>。
+      </div>
+    </details>
+    <details>
+      <summary>我申訴了，會不會被報復或資遣？</summary>
+      <div class="faq-ans">
+        <strong>法律明文禁止，且有獨立罰則。</strong><br><br>
+        職安法明定：雇主不得因申訴而解僱、調職或給予任何不利對待。<br>
+        若發生報復，你可以<strong>針對「報復行為」再提一次申訴</strong>，雇主面臨額外罰款。這條保障就是要讓你敢說出來。
+      </div>
+    </details>
+    <details>
+      <summary>我已經離職了，還可以申訴嗎？</summary>
+      <div class="faq-ans">
+        <strong>可以。</strong>時效以對你有利的方式計算：<br>
+        ① 霸凌行為終了後 <span class="hl">3 年內</span><br>
+        ② 離職後 <span class="hl">1 年內</span><br>
+        兩者取較長的那個。離職不代表申訴權利消失。
+      </div>
+    </details>
+    <details>
+      <summary>外部客戶或廠商對我不好，算霸凌嗎？</summary>
+      <div class="faq-ans">
+        不算<strong>「職場霸凌」</strong>（對方不是公司內部人員），但算<strong>「職場不法侵害」</strong>。<br><br>
+        公司仍有義務處理，包含報警、提供醫療、法律、心理諮商等資源。你可以向公司反映，公司不能不管。
+      </div>
+    </details>
+    <details>
+      <summary>公司沒有建申訴機制，我要怎麼辦？</summary>
+      <div class="faq-ans">
+        <strong>公司不建申訴機制本身就違法。</strong>未依規定可被罰 <span class="hl">3 萬～75 萬元</span>。<br><br>
+        直接撥打 <strong>1955</strong> 或向地方勞動局反映，機關會介入要求公司改正，你不需要等公司自己建好機制才能申訴。
+      </div>
+    </details>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-text">旭瑞文化傳媒（浪LIVE）人力資源部 · 如有疑問請洽 HR</div>
+  <div class="footer-badge">2026 / 7 / 1 施行</div>
+</div>
+
+</div>
+</body>
+</html>
